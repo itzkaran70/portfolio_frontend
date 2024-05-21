@@ -1,0 +1,361 @@
+:root {
+  --box-shadow: 5px 5px 10px 10px rgba(101,175,10, 0.5);
+  --bg-color: rgb(40,47,97);
+}
+
+body {
+  background-color: #04314e;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Navbar Section */
+.text-img {
+  font-size: 70px; /* Default size for large screens */
+  font-weight: bold;
+  background-image: url("../public/assets/hero/image_text.png");
+  background-size: contain;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* Ensures the text background clips properly */
+}
+
+.nav_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Adding some padding for better touch targets */
+}
+
+.nav_bar .nav_items {
+  padding: 16px;
+  font-size: 1.2rem; /* Default font size for large screens */
+  font-weight: bold;
+}
+
+.nav_bar .nav_items:hover {
+  border-bottom: 3px solid yellow;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap */
+  padding: 20px; /* Add padding for all screens */
+  min-height: 60vh; /* Minimum height */
+}
+
+.home .left, .home .right {
+  width: calc(50% - 20px); /* Adjust width considering padding */
+  max-width: 620px; /* Max width for larger screens */
+}
+
+.home .left {
+  background-color: var(--bg-color);
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid yellow;
+  box-shadow: var(--box-shadow);
+}
+
+.home .right .img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .right .img img {
+  max-width: 300px; /* Limit image width */
+  max-height: 300px; /* Limit image height */
+  width: 100%; /* Make width responsive */
+  height: auto; /* Maintain aspect ratio */
+  border: 5px solid yellow;
+  border-radius: 100%;
+  animation: hero 3s infinite;
+}
+
+@keyframes hero {
+  0%{
+    border-color: blue;
+    transform: translate(0, 0px);
+    box-shadow: 10px 10px 100px 50px blue;
+  }
+  25%{
+    border-color: rgb(239, 244, 11);
+    box-shadow: 10px 10px 100px 50px rgb(239, 244, 11);
+  }
+  50%{
+    border-color: rgb(12, 12, 199);
+    transform: translate(0, 10px);
+    box-shadow: 10px 10px 100px 50px rgb(12, 12, 199);
+  }
+  75%{
+    border-color: rgb(130, 217 , 160);
+    box-shadow: 10px 10px 100px 50px rgb(130, 217 , 160);
+  }
+  100%{
+    border-color: rgb(50, 55, 205);
+    transform: translate(0, 10px);
+    box-shadow: 10px 10px 100px 50px rgb(50, 55, 205);
+  }
+}
+
+/* Experience Section */
+.ex {
+  max-width: 100%; /* Limits the max width to the viewport width */
+  padding: 15px; /* Adds padding around the content */
+  margin: -20px; /* Centers the container */
+}
+
+.ex .ex-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-color);
+  width: 100%; /* Allows the item to expand based on the container width */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  border: 1px solid yellow;
+  box-shadow: var(--box-shadow);
+}
+
+.ex .ex-item img {
+  width: 200px; /* Fixed width for large screens */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Adds spacing between the image and the text */
+}
+
+/* Projects Section */
+.projects {
+  max-width: 100%; /* Limits the max width to the viewport width */
+  padding: 20px; /* Adds padding around the content */
+  margin: auto; /* Centers the container */
+}
+
+.projects .project-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-color);
+  width: 100%; /* Allows the item to expand based on the container width */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  border: 1px solid yellow;
+  box-shadow: var(--box-shadow);
+}
+
+.projects .project-item img {
+  width: 200px; /* Fixed width for large screens */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Adds spacing between the image and the text */
+}
+
+/* Skills Section */
+.skills {
+  max-width: 100%; /* Ensure this doesn't exceed the viewport width */
+  padding: 20px; /* Padding for spacing inside the container */
+}
+
+.skills .items {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow items to wrap onto the next line */
+  margin: 0 auto; /* Center the flex container */
+}
+
+.skills .items .item {
+  flex: 0 0 calc(25% - 40px); /* 4 items per row on large screens */
+  background-color: black;
+  margin: 20px; /* Margin around items */
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid yellow;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+.skills .items .item img {
+  width: 80px; /* Fixed width for images */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.contact-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;  /* Allow wrapping on small screens */
+}
+
+.contact-icon .items {
+  background-color: black;
+  margin: 10px;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 1px solid yellow;
+}
+
+.contact-icon .items:hover {
+  background-color: var(--bg-color);
+  box-shadow: var(--box-shadow);
+}
+
+.contact-icon .icons {
+  font-size: 2rem;
+}
+
+/* Media Queries for Responsive Adjustments */
+@media (max-width: 1200px) {
+  .skills .items .item {
+    flex: 0 0 calc(33.33% - 40px); /* 3 items per row on medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .skills .items .item {
+    flex: 0 0 calc(50% - 40px); /* 2 items per row on small screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .nav_bar {
+    flex-direction: column; /* Stack navigation items vertically on smaller screens */
+    align-items: center;
+  }
+
+  .nav_bar .nav_items {
+    width: 100%; /* Full width for a better touch experience */
+    text-align: center; /* Center text for a clean look */
+  }
+
+  .home, .ex, .skills, .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home .left, .home .right {
+    width: 100%; /* Full width on smaller devices */
+  }
+
+  .home .right {
+    order: 1; /* Image on top */
+  }
+
+  .home .left {
+    order: 2; /* Text on bottom */
+  }
+
+  .skills .items .item {
+    flex: 0 0 100%; /* 1 item per row on extra small screens */
+  }
+
+  .ex .ex-item img, .projects .project-item img {
+    width: 100px; /* Smaller images on small screens */
+  }
+
+  .ex .ex-item, .projects .project-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ex .ex-item img, .projects .project-item img {
+    margin: 0 0 20px 0; /* Reset margins and add bottom margin */
+  }
+}
+
+@media (max-width: 480px) {
+  .text-img {
+    font-size: 40px; /* Even smaller font size for small screens */
+  }
+
+  .nav_bar .nav_items {
+    font-size: 0.9rem; /* Reduce font size for very small devices */
+    padding: 8px 5px; /* Further reduce padding */
+  }
+
+  .home .left, .home .right .img img {
+    margin: 35px;
+    padding: 15px; /* Adjust padding for very small screens */
+    max-width: 250px; /* Adjust max-width for very small screens */
+    max-height: 250px; /* Adjust max-height for images */
+  }
+
+  .contact-icon .icons {
+    font-size: 1.5rem; /* Smaller font size for smaller screens */
+  }
+
+  .contact-icon .items {
+    height: 60px; /* Slightly smaller icons for small screens */
+    width: 60px;
+  }
+}
+
+/* Footer Section */
+/* Footer Section */
+footer {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+
+
+.contact-form {
+  background: var(--bg-color);
+  padding: 30px;
+  margin-bottom: 70px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  color: #ffffff;
+}
+
+.contact-form .form-label {
+  color: #ffffff;
+}
+
+.contact-form .form-control {
+  background: #2c2f33;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.contact-form .form-control:focus {
+  background: #2c2f33;
+  color: #ffffff;
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: none;
+}
+
+.contact-form .btn-primary {
+  background: #66afe9;
+  border: none;
+}
+
+.contact-form .btn-primary:hover {
+  background: #5a99d4;
+}
+
