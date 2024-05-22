@@ -25,7 +25,7 @@ function Home() {
       });
 
     // Fetch the profile data from the backend
-    axios.get(`${API_BASE_URL}profiles/4`) // Change the id as needed
+    axios.get(`${API_BASE_URL}profiles/4/`) // Change the id as needed
       .then(response => {
         console.log('Profile Data:', response.data);
         setProfile(response.data);
