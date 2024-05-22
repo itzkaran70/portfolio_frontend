@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col text-center">
-            <p>&copy; {new Date().getFullYear()} Kamlesh Lovewanshi Portfolio. All Rights Reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Karan Singh Pawar Portfolio. All Rights Reserved.</p>
             <p>Created using the <b className='text-warning'>React.js & Django Rest Framework</b></p>
           </div>
         </div>
