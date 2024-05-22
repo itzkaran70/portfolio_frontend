@@ -16,7 +16,7 @@ function Navbar() {
           <a href="#skills" className="nav_items">Skills</a>
           <a href="#projects" className="nav_items">Projects</a>
           <a href="#contact" className="nav_items">Contact</a>
-          <a href="https://kamlesh-lovewanshi-portfolio.onrender.com/admin" className="nav_items">Login</a>
+          <a href="https://karan-singh-pawar-portfolio.onrender.com/admin" className="nav_items">Login</a>
         </div>
       </div>
     </>
